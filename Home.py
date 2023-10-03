@@ -411,12 +411,12 @@ elif select_menu == "Certifications":
             col1.markdown(f"**{curso['curso']}**\n*{curso['instituicao']}*\n{curso['periodo']}")
             for habilidade in curso['habilidades']:
                 col1.write(f"- {habilidade}")
-'''
-        # Se houver mais de um curso, exibe a segunda coluna
-        if len(cursos_complementares) > 1:
-            for curso in cursos_complementares[1:]:
-                col2.markdown(f"**{curso['curso']}**\n*{curso['instituicao']}*\n{curso['periodo']}")
-                for habilidade in curso['habilidades']:
-                    col2.write(f"- {habilidade}")
-'''
+        '''
+                # Se houver mais de um curso, exibe a segunda coluna
+                if len(cursos_complementares) > 1:
+                    for curso in cursos_complementares[1:]:
+                        col2.markdown(f"**{curso['curso']}**\n*{curso['instituicao']}*\n{curso['periodo']}")
+                        for habilidade in curso['habilidades']:
+                            col2.write(f"- {habilidade}")
+        '''
     
