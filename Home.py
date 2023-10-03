@@ -193,37 +193,73 @@ elif select_menu == "Hard Skills":
         st.write('#')
         st.subheader('Hard Skills')
 
-import streamlit as st
+        # Cria as duas colunas
+        col1, col2 = st.columns(2)
 
-# Cria as duas colunas
-col1, col2 = st.columns(2)
+        # Dados das habilidades
+        dados = {
+            'Python': 'Intermediário',
+            'SQL': 'Iniciante',
+            'Tableau': 'Avançado',
+            'Machine_Learning': 'Intermediário',
+            'Trading_Quant': 'Intermediário',
+            'Pacote_Office': 'Intermediário',
+            'Git': 'Intermediário',
+            'Inglês': 'Intermediário',
+            'Habilidades_em_marketing': 'Intermediário',
+            'Habilidades_de_design': 'Intermediário',
+            'Google_Analytics': 'Intermediário',
+            'Google_Adsense': 'Iniciante',
+            'Wordpress': 'Iniciante',
+            'Google_Trends': 'Iniciante',
+            'Google_Meu_negócio': 'Intermediário',
+            'Google_Workspace': 'Iniciante',
+            'ChatGpt': 'Intermediário'
+        }
 
-# Dados das habilidades
-dados = {
-    'Python': 'Intermediário',
-    'SQL': 'Iniciante',
-    'Tableau': 'Avançado',
-    'Machine_Learning': 'Intermediário',
-    'Trading_Quant': 'Intermediário',
-    'Pacote_Office': 'Intermediário',
-    'Git': 'Intermediário',
-    'Inglês': 'Intermediário',
-    'Habilidades_em_marketing': 'Intermediário',
-    'Habilidades_de_design': 'Intermediário',
-    'Google_Analytics': 'Intermediário',
-    'Google_Adsense': 'Iniciante',
-    'Wordpress': 'Iniciante',
-    'Google_Trends': 'Iniciante',
-    'Google_Meu_negócio': 'Intermediário',
-    'Google_Workspace': 'Iniciante',
-    'ChatGpt': 'Intermediário'
-}
+        # Divide os dados em duas listas
+        habilidades = list(dados.keys())
+        niveis = list(dados.values())
 
-# Divide os dados em duas listas
-habilidades = list(dados.keys())
-niveis = list(dados.values())
+        # Adiciona as linhas nas colunas
+        for habilidade1, habilidade2, nivel1, nivel2 in zip(habilidades[:10], habilidades[10:], niveis[:10], niveis[10:]):
+            col1.write(f"- *{habilidade1} - {nivel1}*")
+            col2.write(f"- *{habilidade2} - {nivel2}*")
 
-# Adiciona as linhas nas colunas
-for habilidade1, habilidade2, nivel1, nivel2 in zip(habilidades[:10], habilidades[10:], niveis[:10], niveis[10:]):
-    col1.write(f"- *{habilidade1} - {nivel1}*")
-    col2.write(f"- *{habilidade2} - {nivel2}*")
+elif select_menu == "Soft Skills":
+        st.write('#')
+        st.subheader('Soft Skills')
+
+        # Criar colunas
+        col1, col2 = st.columns(2)
+
+        dados = {
+            'Empatia': 'Alto',
+            'Responsabilidade': 'Alta',
+            'Comunicativo': 'Médio',
+            'Trabalho em equipe': 'Alto',
+            'Liderança': 'Alto',
+            'Criatividade': 'Alta',
+            'Gestão de projetos': 'Média',
+            'Perseverança': 'Alta',
+            'Atitude positiva em relação aos desafios': 'Alta',
+            'Pensamento crítico com foco em buscar soluções': 'Alta',
+            'Inteligência emocional para lidar com frustrações': 'Alta',
+            'Saber ouvir as pessoas':'Alta',
+            'Resiliência':'Alta',
+            'Princípios éticos':'Alta',
+            'Capacidade de trabalhar sob pressão':'Alta',
+            'Motivação':'Alta',
+            'Autodidata':'Alta',
+            'Proatividade':'Alta',
+            'Resolução de conflitos':'Alta',
+        }
+        habilidades = list(dados.keys())
+        niveis = list(dados.values())
+
+        for habilidade1, habilidade2, nivel1, nivel2 in zip(habilidades[:10], habilidades[:10], niveis[:10], niveis[:10]):
+            col1.write(f"- *{habilidade1} - {nivel1}*")
+            col2.write(f"- *{habilidade2} - {nivel2}*")
+
+
+    
