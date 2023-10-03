@@ -391,32 +391,61 @@ elif select_menu == "Certifications":
             },
             {
                 'curso': 'Big Data Fundamentos 3.0',
-                'instituicao': 'Ironhack',
-                'periodo': 'Out-2022 - Dez-2022',
+                'instituicao': 'Data Science Academy',
+                'periodo': 'Nov-2022',
                 'habilidades': [
-                    'Python',
-                    'SQL',
-                    'Business Inteligent',
-                    'Machine Learning',
-                    'Git',
-                    'Statistics'
+                    'O Que é Big Data',
+                    'Sistemas de Armazenamento de Dados',
+                    'Armazenamento e Processamento Paralelo',
+                    'Cloud Computing',
+                    'MLOps e DataOps',
+                    'Dados Como Serviço',
+                    'ETL - Extração, Transformação e Carga de Dados',
+                    'Como Iniciar um Projeto de Big Data?'
+                ]
+            },
+            {
+                'curso': 'Resolução de Problemas e Tomada de Decisão',
+                'instituicao': 'Fecap',
+                'periodo': 'Nov-2022',
+                'habilidades': [
+                    'Tomada de Decisão',
+                    'Resolução de Problemas',
+                    'Melhoria Contínua',
+                    'Análise de Dados',
+                    'Gestão de Riscos',
+                    'Pensamento Crítico',
+                ]
+            },
+            {
+                'curso': 'Resolução de Problemas e Tomada de Decisão',
+                'instituicao': 'Voitto',
+                'periodo': 'Dez-2022',
+                'habilidades': [
+                    'Tomada de Decisão',
+                    'Resolução de Problemas',
+                    'Melhoria Contínua',
+                    'Análise de Dados',
+                    'Gestão de Riscos',
+                    'Pensamento Crítico',
                 ]
             }
         ]
 
         # Exibe os cursos complementares em duas colunas
+        # Exibe os cursos complementares em duas colunas
+        # Exibe os cursos complementares em duas colunas
         col1, col2 = st.columns(2)
 
-        for curso in cursos_complementares:
-            col1.markdown(f"**{curso['curso']}**\n*{curso['instituicao']}*\n{curso['periodo']}")
-            for habilidade in curso['habilidades']:
-                col1.write(f"- {habilidade}")
-        '''
-                # Se houver mais de um curso, exibe a segunda coluna
-                if len(cursos_complementares) > 1:
-                    for curso in cursos_complementares[1:]:
-                        col2.markdown(f"**{curso['curso']}**\n*{curso['instituicao']}*\n{curso['periodo']}")
-                        for habilidade in curso['habilidades']:
-                            col2.write(f"- {habilidade}")
-        '''
+        # Exibe os primeiros 4 cursos na primeira coluna
+        for i, curso in enumerate(cursos_complementares):
+            if i < 4:
+                col1.markdown(f"**{curso['curso']}**\n*{curso['instituicao']}*\n{curso['periodo']}")
+                for habilidade in curso['habilidades']:
+                    col1.write(f"- {habilidade}")
+            else:
+                col2.markdown(f"**{curso['curso']}**\n*{curso['instituicao']}*\n{curso['periodo']}")
+                for habilidade in curso['habilidades']:
+                    col2.write(f"- {habilidade}")
+        
     
