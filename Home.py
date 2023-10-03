@@ -1,12 +1,11 @@
 import streamlit as st
 from pathlib import Path
 from PIL import Image
-import streamlit as st
-import matplotlib.pyplot as plt
+
 
 
 # Opções do menu da barra lateral
-menu = ['Página Inicial', "Me", "Qualifications", "Hard Skills", "Soft Skills","Projects", "Work History"]
+menu = ['Página Inicial', "Me", "Qualifications", "Hard Skills", "Soft Skills", "Work History","Course", "Projects"]
 
 select_menu = st.sidebar.radio("Menu", menu)
 
@@ -253,6 +252,7 @@ elif select_menu == "Soft Skills":
             'Autodidata':'Alta',
             'Proatividade':'Alta',
             'Resolução de conflitos':'Alta',
+            'Atendimento ao Cliente': 'Alta'
         }
         habilidades = list(dados.keys())
         niveis = list(dados.values())
@@ -261,5 +261,80 @@ elif select_menu == "Soft Skills":
             col1.write(f"- *{habilidade1} - {nivel1}*")
             col2.write(f"- *{habilidade2} - {nivel2}*")
 
+elif select_menu == "Work History":
+        st.write('#')
+        st.subheader("Work History")
+
+        import streamlit as st
+
+# Dados da experiência profissional
+        experiencia_profissional = [
+            {
+                'empresa': 'Anywind, França',
+                    'cargo': 'Técnico de manutenção em Torres Eólicas - Experiência Internacional',
+                    'periodo': 'Mar-2021 - Maio-2022',
+                    'descricao': [
+                        'Realizei a manutenção corretiva das torres eólicas',
+                        'Sugeri melhorias em segurança e o dia a dia do trabalho'
+                ],
+                    'habilidades': [
+                        'Trabalho em equipe',
+                        'Gestão de Tempo',
+                        'Adaptabilidade',
+                        'Solução de Problemas',
+                        'Habilidade para lidar com mudanças'
+                ]
+            },
+            {
+                'empresa': 'Pratik Serviços, Porto - Portugal',
+                'cargo': 'Empresário - Experiência Internacional',
+                'periodo': 'Mar-2019 - Fev-2021',
+                'descricao' : [
+                    'Identifiquei oportunidades e melhorias na empresa, desde o trato com cliente até a compra de ferramentas\
+                        para melhoria da prestação de serviço'
+                ],
+                'habilidades': [
+                    'Visão Estratégica',
+                    'Proatividade',
+                    'Habilidade para resolver problemas',
+                    'Orientação a Resultados',
+                    'Habilidade para lidar com diferenças culturais',
+                    'Prospecção de Clientes'
+                ]
+            },
+            {
+                'empresa': 'Mais Eco Mais Vida - São Paulo - São Paulo',
+                'cargo': 'Empresário',
+                'periodo': 'Jan-2012 - Jan-2019',
+                'descricao' : [ "Realizava o contato com o cliente e a prestação do serviço, mas contando com mais 2 funcionários.\
+                    realizei diversos cursos na área de estética automotiva e apresentação do projeto para empresas.\
+                        Ministrei curso na área de estética e lavagem a seco."
+                ],
+                'habilidades': [
+                    'Flexibilidade',
+                    'Comunicação Efetiva',
+                    'Capacidade de aprendizado rápido',
+                    'Resiliência',
+                    'Habilidade de Negociação'
+                ]
+            }
+
+
+
+
+
+        ]
+
+        # Exibe a experiência profissional em duas colunas
+        col1, col2 = st.columns(2)
+
+        for experiencia in experiencia_profissional:
+            col1.markdown(f"**{experiencia['empresa']}**\n*{experiencia['cargo']}*\n{experiencia['periodo']}")
+            for descricao in experiencia['descricao']:
+                col1.write(f"- {descricao}")
+            for habilidade in experiencia['habilidades']:
+                col1.write(f"- {habilidade}")
+
+        
 
     
