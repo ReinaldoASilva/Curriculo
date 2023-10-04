@@ -448,4 +448,37 @@ elif select_menu == "Certifications":
                 for habilidade in curso['habilidades']:
                     col2.write(f"- {habilidade}")
         
-    
+        
+
+elif select_menu == "Projects":
+        st.write('#')
+        st.subheader('Projects')
+        
+                # Dados dos projetos
+        projects = {
+                    '🏆 Dashboard - Obesidade Infantil': 'https://github.com/ReinaldoASilva/Obesidade-Infantil',
+                    '🏆 Clausterização - Diamond': 'https://github.com/ReinaldoASilva/Diamond',
+                    '🏆 Previsao_max_min_fechamento_eurusd': 'https://github.com/ReinaldoASilva/Previsao_max_min_fechamento_eurusd',
+                    '🏆 Calculadora': 'https://github.com/ReinaldoASilva/Calculadora',
+                    '🏆 Prever Movimento BVBMF': 'https://github.com/ReinaldoASilva/Prever_movimento_BVBMF',
+                    '🏆 Previsão Índice Brasil': 'https://github.com/ReinaldoASilva/Previsao_indice_Brasil',
+                    '🏆 Monte Carlo': 'https://github.com/ReinaldoASilva/Monte_Carlo',
+                    '🏆 Previsão Cão ou Porco': 'https://github.com/ReinaldoASilva/Previsao-cao-ou-porco',
+                    '🏆 Vendas por Fatura': 'https://github.com/ReinaldoASilva/Vendas_por_fatura',
+                    '🏆 IBGE': 'https://github.com/ReinaldoASilva/IBGE',
+                    '🏆 Análise de acoe': 'https://github.com/ReinaldoASilva/Analise-de-acoes',
+                    '🏆 Simulador de Caos na Academia': 'https://github.com/ReinaldoASilva/simulador-de-caos-academia',
+                    '🏆 Pedra Papel Tesoura': 'https://github.com/ReinaldoASilva/Pedra---Papel---Tesoura',
+                    '🏆 Monte_Carlo': 'https://github.com/ReinaldoASilva/Monte_Carlo'
+                }
+
+                # Exibe os projetos em duas colunas 
+        col1, col2 = st.columns(2)
+
+                # Exibe os primeiros 2 projetos na primeira coluna
+        for i, (project_name, project_link) in enumerate(projects.items()):
+                if i < 2:
+                    col1.markdown(f"[{project_name}]({project_link})")
+                else:
+                    col2.markdown(f"[{project_name}]({project_link})")
+     
