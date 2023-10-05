@@ -2,7 +2,7 @@ import streamlit as st
 from pathlib import Path
 from PIL import Image
 import itertools
-
+import datetime
 
 # Opções do menu da barra lateral
 menu = ['Página Inicial', "Me", "Qualifications", "Hard Skills", "Soft Skills", "Work History","Certifications", "Projects"]
@@ -449,11 +449,18 @@ elif select_menu == "Certifications":
                     col2.write(f"- {habilidade}")
         
 
+# Exibe a mensagem de última atualização na barra lateral
+last_update = datetime.datetime(2023, 10, 5)  # Substitua pela data da última atualização
+project_name = "Diamante Rick"  # Substitua pelo nome do último projeto
+st.sidebar.info(f"Última atualização: {last_update.strftime('%d/%m/%Y')}, {project_name}")
 
+if select_menu == "Projects":
 
-elif select_menu == "Projects":
     st.write('#')
     st.subheader('Projects')
+
+    # Exibe a mensagem de última atualização na barra lateral
+    
 
     st.markdown("")
     projects1 = [
@@ -516,3 +523,13 @@ elif select_menu == "Projects":
         st.markdown("#### Web Scraping")
         for project_name, project_link in projects4:
             st.markdown(f"[{project_name}]({project_link})")
+
+   # Atualização mais recente
+    last_update = datetime.datetime(2023, 10, 5)  # Substitua pela data da última atualização
+    last_project = projects1[0][0]  # Substitua pelo nome do projeto mais recente
+
+    # Exibição dos projetos
+    st.markdown("## Projects")
+    st.markdown("### Aleatórios")
+    for project_name, project_link in projects1:
+        st.markdown(f"[{project_name}]({project_link})")
