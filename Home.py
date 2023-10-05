@@ -1,7 +1,7 @@
 import streamlit as st
 from pathlib import Path
 from PIL import Image
-
+import itertools
 
 
 # Opções do menu da barra lateral
@@ -448,41 +448,71 @@ elif select_menu == "Certifications":
                 for habilidade in curso['habilidades']:
                     col2.write(f"- {habilidade}")
         
-        
+
+
 
 elif select_menu == "Projects":
-        st.write('#')
-        st.subheader('Projects')
-        
-                # Dados dos projetos
-        projects = {
-                    '🏆 Obesidade Infantil': 'https://github.com/ReinaldoASilva/Obesidade-Infantil',
-                    '🏆 Previsao_max_min_fechamento_eurusd': 'https://github.com/ReinaldoASilva/Previsao_max_min_fechamento_eurusd',
-                    '🏆 Calculadora': 'https://github.com/ReinaldoASilva/Calculadora',
-                    '🏆 Prever Movimento BVBMF': 'https://github.com/ReinaldoASilva/Prever_movimento_BVBMF',
-                    '🏆 Previsão Índice Brasil': 'https://github.com/ReinaldoASilva/Previsao_indice_Brasil',
-                    '🏆 Monte Carlo': 'https://github.com/ReinaldoASilva/Monte_Carlo',
-                    '🏆 Previsão Cão ou Porco': 'https://github.com/ReinaldoASilva/Previsao-cao-ou-porco',
-                    '🏆 Vendas por Fatura': 'https://github.com/ReinaldoASilva/Vendas_por_fatura',
-                    '🏆 IBGE': 'https://github.com/ReinaldoASilva/IBGE',
-                    '🏆 Análise de acoe': 'https://github.com/ReinaldoASilva/Analise-de-acoes',
-                    '🏆 Simulador de Caos na Academia': 'https://github.com/ReinaldoASilva/simulador-de-caos-academia',
-                    '🏆 Pedra Papel Tesoura': 'https://github.com/ReinaldoASilva/Pedra---Papel---Tesoura',
-                    '🏆 Calcular-IMC': 'https://github.com/ReinaldoASilva/Calcular-IMC',
-                    '🏆 Calcular a Média de um Aluno': 'https://github.com/ReinaldoASilva/Calcular-a-media-de-um-aluno',
-                    '🏆 Locadora de carros': 'https://github.com/ReinaldoASilva/Locadora-de-carros',
-                    '🏆 Diamante Rick': 'https://github.com/ReinaldoASilva/Diamante-Rick',
-                    '🏆 Shark Attack': 'https://github.com/ReinaldoASilva/Shark-Attack',
-                    '🏆 Simulador da Mega Sena': 'https://github.com/ReinaldoASilva/Simulador-da-Mega-Sena'
-                }
+    st.write('#')
+    st.subheader('Projects')
 
-                # Exibe os projetos em duas colunas 
-        col1, col2 = st.columns(2)
+    st.markdown("")
+    projects1 = [
+        ('🏆 Calculadora', 'https://github.com/ReinaldoASilva/Calculadora'),
+        ('🏆 Simulador de Caos na Academia', 'https://github.com/ReinaldoASilva/simulador-de-caos-academia'),
+        ('🏆 Pedra Papel Tesoura', 'https://github.com/ReinaldoASilva/Pedra---Papel---Tesoura'),
+        ('🏆 Calcular-IMC', 'https://github.com/ReinaldoASilva/Calcular-IMC'),
+        ('🏆 Calcular a Média de um Aluno', 'https://github.com/ReinaldoASilva/Calcular-a-media-de-um-aluno'),
+        ('🏆 Locadora de carros', 'https://github.com/ReinaldoASilva/Locadora-de-carros'),
+        ('🏆 Simulador da Mega Sena', 'https://github.com/ReinaldoASilva/Simulador-da-Mega-Sena')
+    ]
 
-                # Exibe os primeiros 2 projetos na primeira coluna
-        for i, (project_name, project_link) in enumerate(projects.items()):
-                if i < 2:
-                    col1.markdown(f"[{project_name}]({project_link})")
-                else:
-                    col2.markdown(f"[{project_name}]({project_link})")
-     
+    st.markdown("")
+    projects2 = [
+        ('🏆 Previsao_max_min_fechamento_eurusd', 'https://github.com/ReinaldoASilva/Previsao_max_min_fechamento_eurusd'),
+        ('🏆 Prever Movimento BVBMF', 'https://github.com/ReinaldoASilva/Prever_movimento_BVBMF'),
+        ('🏆 Previsão Índice Brasil', 'https://github.com/ReinaldoASilva/Previsao_indice_Brasil'),
+        ('🏆 Monte Carlo', 'https://github.com/ReinaldoASilva/Monte_Carlo'),
+        ('🏆 Análise de acoe', 'https://github.com/ReinaldoASilva/Analise-de-acoes'),
+    ]
+
+    st.markdown("")
+    projects3 = [
+        ('🏆 Obesidade Infantil', 'https://github.com/ReinaldoASilva/Obesidade-Infantil'),
+        ('🏆 Shark Attack', 'https://github.com/ReinaldoASilva/Shark-Attack'),
+    ]
+
+    st.markdown("")
+    projects4 = [
+        ('🏆 IBGE', 'https://github.com/ReinaldoASilva/IBGE'),
+    ]
+
+    st.markdown("")
+    projects5 = [
+        ('🏆 Previsão Cão ou Porco', 'https://github.com/ReinaldoASilva/Previsao-cao-ou-porco'),
+        ('🏆 Diamante Rick', 'https://github.com/ReinaldoASilva/Diamante-Rick'),
+    ]
+
+    # Exibe os projetos e links
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("#### Aleatórios")
+        for project_name, project_link in projects1:
+            st.markdown(f"[{project_name}]({project_link})")
+
+        st.markdown("#### Data Visualization")
+        for project_name, project_link in projects3:
+            st.markdown(f"[{project_name}]({project_link})")
+
+        st.markdown("#### Aprendizagem de Máquina")
+        for project_name, project_link in projects5:
+            st.markdown(f"[{project_name}]({project_link})")
+
+    with col2:
+        st.markdown("#### Mercado Financeiro")
+        for project_name, project_link in projects2:
+            st.markdown(f"[{project_name}]({project_link})")
+
+        st.markdown("#### Web Scraping")
+        for project_name, project_link in projects4:
+            st.markdown(f"[{project_name}]({project_link})")
