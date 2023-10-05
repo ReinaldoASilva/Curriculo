@@ -456,8 +456,7 @@ elif select_menu == "Projects":
         
                 # Dados dos projetos
         projects = {
-                    '🏆 Dashboard - Obesidade Infantil': 'https://github.com/ReinaldoASilva/Obesidade-Infantil',
-                    '🏆 Clausterização - Diamond': 'https://github.com/ReinaldoASilva/Diamond',
+                    '🏆 Obesidade Infantil': 'https://github.com/ReinaldoASilva/Obesidade-Infantil',
                     '🏆 Previsao_max_min_fechamento_eurusd': 'https://github.com/ReinaldoASilva/Previsao_max_min_fechamento_eurusd',
                     '🏆 Calculadora': 'https://github.com/ReinaldoASilva/Calculadora',
                     '🏆 Prever Movimento BVBMF': 'https://github.com/ReinaldoASilva/Prever_movimento_BVBMF',
@@ -469,7 +468,12 @@ elif select_menu == "Projects":
                     '🏆 Análise de acoe': 'https://github.com/ReinaldoASilva/Analise-de-acoes',
                     '🏆 Simulador de Caos na Academia': 'https://github.com/ReinaldoASilva/simulador-de-caos-academia',
                     '🏆 Pedra Papel Tesoura': 'https://github.com/ReinaldoASilva/Pedra---Papel---Tesoura',
-                    '🏆 Monte_Carlo': 'https://github.com/ReinaldoASilva/Monte_Carlo'
+                    '🏆 Calcular-IMC': 'https://github.com/ReinaldoASilva/Calcular-IMC',
+                    '🏆 Calcular a Média de um Aluno': 'https://github.com/ReinaldoASilva/Calcular-a-media-de-um-aluno',
+                    '🏆 Locadora de carros': 'https://github.com/ReinaldoASilva/Locadora-de-carros',
+                    '🏆 Diamante Rick': 'https://github.com/ReinaldoASilva/Diamante-Rick',
+                    '🏆 Shark Attack': 'https://github.com/ReinaldoASilva/Shark-Attack',
+                    '🏆 Simulador da Mega Sena': 'https://github.com/ReinaldoASilva/Simulador-da-Mega-Sena'
                 }
 
                 # Exibe os projetos em duas colunas 
