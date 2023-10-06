@@ -9,6 +9,22 @@ menu = ['Página Inicial', "Me", "Qualifications", "Hard Skills", "Soft Skills",
 
 select_menu = st.sidebar.radio("Menu", menu)
 
+
+# Remover o menu do streamlit
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+
+
+
+
+
 # Conteúdo principal da página
 if select_menu == "Página Inicial":
 
@@ -70,6 +86,31 @@ if select_menu == "Página Inicial":
     cols = st.columns(len(social_media))
     for index, (platform, link) in enumerate(social_media.items()):
         cols[index].markdown(f'[{platform}]({link})')
+    
+
+    # Função para ler e atualizar o contador de visitas
+    def update_visit_count():
+        try:
+            with open("visit_count.txt", "r+") as file:
+                count = int(file.read())
+                count += 1
+                file.seek(0)
+                file.write(str(count))
+        except FileNotFoundError:
+            with open("visit_count.txt", "w") as file:
+                count = 1
+                file.write(str(count))
+        return count
+
+    # Obtém o número de visitas
+    visit_count = update_visit_count()
+
+    # Exibe o contador de visitas
+    st.sidebar.info(f"Número de Visitas: {visit_count}")
+    
+    
+    
+    
     st.write("")
     st.write("")
     st.write(" Seja bem vindo ao nosso espaço.")
