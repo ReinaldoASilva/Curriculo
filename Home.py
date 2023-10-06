@@ -524,12 +524,3 @@ if select_menu == "Projects":
         for project_name, project_link in projects4:
             st.markdown(f"[{project_name}]({project_link})")
 
-   # Atualização mais recente
-    last_update = datetime.datetime(2023, 10, 5)  # Substitua pela data da última atualização
-    last_project = projects1[0][0]  # Substitua pelo nome do projeto mais recente
-
-    # Exibição dos projetos
-    st.markdown("## Projects")
-    st.markdown("### Aleatórios")
-    for project_name, project_link in projects1:
-        st.markdown(f"[{project_name}]({project_link})")
