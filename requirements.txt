@@ -1,5 +1,5 @@
 streamlit 
-pathlib 
+path
 PIL 
 datetime
 itertools
