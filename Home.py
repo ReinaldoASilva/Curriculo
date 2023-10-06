@@ -21,10 +21,6 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
-
-
-
-
 # Conteúdo principal da página
 if select_menu == "Página Inicial":
 
@@ -493,7 +489,7 @@ elif select_menu == "Certifications":
 # Exibe a mensagem de última atualização na barra lateral
 last_update = datetime.datetime(2023, 10, 5)  # Substitua pela data da última atualização
 project_name = "Diamante Rick"  # Substitua pelo nome do último projeto
-st.sidebar.info(f"Última atualização: {last_update.strftime('%d/%m/%Y')}, {project_name}")
+st.sidebar.info(f"Última atualização: {last_update.strftime('%d/%m/%Y')}, Project: {project_name}")
 
 if select_menu == "Projects":
 
