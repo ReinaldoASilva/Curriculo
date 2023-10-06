@@ -18,14 +18,14 @@ if select_menu == "Página Inicial":
     current_dir = Path(__file__).parent if '__file__' in locals() else Path.cwd()
     css_file = current_dir / 'styles' / 'main.css'
     resume_file = current_dir / 'assets' / 'cv.pdf'
-    profile_pic = current_dir / 'assets' / 'fotolinkedin.png'
+    profile_pic = current_dir / 'assets' / 'minhafoto.png'
 
     ####  -------------------- General SETTINGS --------------------
 
     Page_title = 'Digital cv | Reinaldo Black'
     Page_icon = ':wave:'
     name = 'Reinaldo Black'
-    Description = 'Analista de dados voltado para negócios'
+    Description = 'Cientista de Dados Jr. Com experiência em negócios'
 
     email = 'reialvesilva@gmail.com'
 
@@ -73,7 +73,7 @@ if select_menu == "Página Inicial":
     st.write("")
     st.write("")
     st.write(" Seja bem vindo ao nosso espaço.")
-    st.write("Reservei esse espaço para contar um pouco sobre minha história.")
+    st.write("Reservei esse espaço para contar um pouco sobre minha história, minhas habilidaes e experiêcnias.")
     st.write("Acima você pode baixar uma versão resumida do CV, fique à vontade para fazer o download")
     st.write("Acima você também encontra minhas redes sociais, é sempre bom ver como nos comportamos por lá, não é verdade? ")
 
