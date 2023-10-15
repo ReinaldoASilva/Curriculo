@@ -499,9 +499,6 @@ if select_menu == "Projects":
     st.write('#')
     st.subheader('Projects')
 
-    # Exibe a mensagem de última atualização na barra lateral
-    
-
     st.markdown("")
     projects1 = [
         ('🏆 Calculadora', 'https://github.com/ReinaldoASilva/Calculadora'),
