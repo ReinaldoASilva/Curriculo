@@ -40,7 +40,7 @@ if select_menu == "Página Inicial":
     Page_title = 'Digital cv | Reinaldo Black'
     Page_icon = ':wave:'
     name = 'Reinaldo Black'
-    Description = 'Cientista de Dados Jr. Com experiência em negócios'
+    Description = 'Data Analytics. With Business Experience'
 
     email = 'reialvesilva@gmail.com'
 
@@ -565,7 +565,6 @@ if select_menu == "Projects":
             st.markdown(f"[{project_name}]({project_link})")
 
 elif select_menu == "Contato":
-
 
     # Função para gerar o QR Code
     def generate_qr_code(data):
