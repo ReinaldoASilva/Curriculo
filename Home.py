@@ -3,9 +3,12 @@ from pathlib import Path
 from PIL import Image
 import itertools
 import datetime
+import qrcode
+import io
+
 
 # Opções do menu da barra lateral
-menu = ['Página Inicial', "Me", "Qualifications", "Hard Skills", "Soft Skills", "Work History","Certifications", "Projects"]
+menu = ['Página Inicial', "Me", "Qualifications", "Hard Skills", "Soft Skills", "Work History","Certifications", "Projects", "Contato"]
 
 select_menu = st.sidebar.radio("Menu", menu)
 
@@ -561,3 +564,37 @@ if select_menu == "Projects":
         for project_name, project_link in projects4:
             st.markdown(f"[{project_name}]({project_link})")
 
+elif select_menu == "Contato":
+
+
+    # Função para gerar o QR Code
+    def generate_qr_code(data):
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+        qr.add_data(data)
+        qr.make(fit=True)
+        qr_img = qr.make_image(fill_color="black", back_color="white")
+        return qr_img
+
+    # Configurações do WhatsApp
+    whatsapp_number = "+5544991653088"
+
+    # Configurações do Streamlit
+    st.subheader("Gostaria de tirar alguma dúvida ou entrar em contato?")
+    st.markdown("É só scannear o qrcode abaixo e enviar uma mensagem diretamente pro meu whatsapp")
+
+    # Gerando o QR Code com o redirecionamento para o WhatsApp
+    qr_code_data = f"https://api.whatsapp.com/send?phone={whatsapp_number}"
+    qr_code_img = generate_qr_code(qr_code_data)
+
+    # Convertendo a imagem em bytes
+    img_byte_arr = io.BytesIO()
+    qr_code_img.save(img_byte_arr, format='PNG')
+    img_byte_arr = img_byte_arr.getvalue()
+
+    # Exibindo o QR Code na página
+    st.image(img_byte_arr)
