@@ -273,6 +273,7 @@ elif select_menu == "Soft Skills":
         col1, col2 = st.columns(2)
 
         dados = {
+            'Inglês' : "Intermediário",
             'Empatia': 'Alto',
             'Responsabilidade': 'Alta',
             'Comunicativo': 'Médio',
@@ -304,8 +305,6 @@ elif select_menu == "Soft Skills":
 elif select_menu == "Work History":
         st.write('#')
         st.subheader("Work History")
-
-        import streamlit as st
 
 # Dados da experiência profissional
         experiencia_profissional = [
