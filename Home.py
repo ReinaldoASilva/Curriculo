@@ -523,6 +523,7 @@ if select_menu == "Projects":
     projects3 = [
         ('🏆 Obesidade Infantil', 'https://github.com/ReinaldoASilva/Obesidade-Infantil'),
         ('🏆 Shark Attack', 'https://github.com/ReinaldoASilva/Shark-Attack'),
+        ('🏆 Amazon Top Books', 'https://github.com/ReinaldoASilva/Amazon-top-books')
     ]
 
     st.markdown("")
