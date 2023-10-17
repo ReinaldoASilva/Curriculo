@@ -490,7 +490,7 @@ elif select_menu == "Certifications":
 
 # Exibe a mensagem de última atualização na barra lateral
 last_update = datetime.datetime(2023, 10, 17)  # Substitua pela data da última atualização
-project_name = "Credit-score-classification"  # Substitua pelo nome do último projeto
+project_name = "Credit-Score-Classification"  # Substitua pelo nome do último projeto
 st.sidebar.info(f"Última atualização: {last_update.strftime('%d/%m/%Y')}, Project: {project_name}")
 
 if select_menu == "Projects":
