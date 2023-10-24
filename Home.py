@@ -475,7 +475,7 @@ elif select_menu == "Certifications":
                 'periodo': 'Out-2023',
                 'habilidades': [
                     'Act Commands que todo dev deveria conhecer',
-                    'Elevando o nível dos Act Commands',
+                    'Elevando o nível dos Act Commands'
                 
                 ]
             },
@@ -486,7 +486,7 @@ elif select_menu == "Certifications":
                 'periodo': 'Out-2023',
                 'habilidades': [
                     'O código Davinci',
-                    'Criando conta na Openai',
+                    'Criando conta na Openai'
                 
                 ]
             },
@@ -497,7 +497,7 @@ elif select_menu == "Certifications":
                 'habilidades': [
                     'Pair Programming with GPT',
                     'Documentações Profissionais e Instântaneas',
-                    'ChatGpt como Mentor',
+                    'ChatGpt como Mentor'
                 
                 ]
             },
@@ -510,18 +510,63 @@ elif select_menu == "Certifications":
                     'Códigos Eficientes',
                     'Simplificação de Códigos',
                     'Modularizando o Código',
-                    'Refatorando a estrutura de pastas e combinando técnicas',
+                    'Refatorando a estrutura de pastas e combinando técnicas'
+                
+                ]
+            },
+        
+        {
+                'curso': 'Como Utilizar o ChatGPT para Simular Entrevistas Técnicas',
+                'instituicao': 'Dio',
+                'periodo': 'Out-2023',
+                'habilidades': [
+                    'GPT como entrevistador',
+                    'Entre no DNA técnico da empresa desejada',
+                    'Entre no DNA de soft skills da empresa desejada',
+                    'GPT como Entrevistador'
+                
+                ]
+            },
+        
+        {
+                'curso': 'Introdução ao Machine Learning',
+                'instituicao': 'Dio',
+                'periodo': 'Out-2023',
+                'habilidades': [
+                    'Métodos de Machine Learning e suas aplicações',
+                    'Machine Learning aplicados em sistemas reais',
+                    'Modelos de Machine Learning para Visão Computaciona'
+                
+                ]
+            },
+
+        {
+                'curso': 'Métodos de Machine Learning Bioinspirados',
+                'instituicao': 'Dio',
+                'periodo': 'Out-2023',
+                'habilidades': [
+                    'Métodos de Machine Learning bioinspirados',
+                    'Algoritmos Heurísticos x Determinísticos'
+                
+                ]
+            },
+
+        {
+                'curso': 'Redes Neurais Artificiais',
+                'instituicao': 'Dio',
+                'periodo': 'Out-2023',
+                'habilidades': [
+                    'Redes Neurais Artificiais',
+                    'Treinamento de uma Rede Neural Artificial',
+                    'Classificação: Execução da Rede Neural Artificial'
                 
                 ]
             }
         
         
         
-        
         ]
 
-        # Exibe os cursos complementares em duas colunas
-        # Exibe os cursos complementares em duas colunas
         # Exibe os cursos complementares em duas colunas
         col1, col2 = st.columns(2)
 
