@@ -500,7 +500,21 @@ elif select_menu == "Certifications":
                     'ChatGpt como Mentor',
                 
                 ]
+            },
+        
+          {
+                'curso': 'Como Utilizar o ChatGPT para Refatorar Códigos',
+                'instituicao': 'Dio',
+                'periodo': 'Out-2023',
+                'habilidades': [
+                    'Códigos Eficientes',
+                    'Simplificação de Códigos',
+                    'Modularizando o Código',
+                    'Refatorando a estrutura de pastas e combinando técnicas',
+                
+                ]
             }
+        
         
         
         
