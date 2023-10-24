@@ -468,7 +468,42 @@ elif select_menu == "Certifications":
                     'Gestão de Riscos',
                     'Pensamento Crítico',
                 ]
+            },
+        {
+                'curso': 'Act Commands - Seu ChatGPT como Assistente Virtual',
+                'instituicao': 'Dio',
+                'periodo': 'Out-2023',
+                'habilidades': [
+                    'Act Commands que todo dev deveria conhecer',
+                    'Elevando o nível dos Act Commands',
+                
+                ]
+            },
+        
+        {
+                'curso': 'Como Ingressar no Futuro Agora Mesmo com ChatGPT',
+                'instituicao': 'Dio',
+                'periodo': 'Out-2023',
+                'habilidades': [
+                    'O código Davinci',
+                    'Criando conta na Openai',
+                
+                ]
+            },
+        {
+                'curso': 'Como Utilizar o ChatGPT como Copiloto de Programação',
+                'instituicao': 'Dio',
+                'periodo': 'Out-2023',
+                'habilidades': [
+                    'Pair Programming with GPT',
+                    'Documentações Profissionais e Instântaneas',
+                    'ChatGpt como Mentor',
+                
+                ]
             }
+        
+        
+        
         ]
 
         # Exibe os cursos complementares em duas colunas
@@ -489,8 +524,8 @@ elif select_menu == "Certifications":
         
 
 # Exibe a mensagem de última atualização na barra lateral
-last_update = datetime.datetime(2023, 10, 17)  # Substitua pela data da última atualização
-project_name = "Credit-Score-Classification"  # Substitua pelo nome do último projeto
+last_update = datetime.datetime(2023, 10, 24)  # Substitua pela data da última atualização
+project_name = "Employee_Turnover_Predicition"  # Substitua pelo nome do último projeto
 st.sidebar.info(f"Última atualização: {last_update.strftime('%d/%m/%Y')}, Project: {project_name}")
 
 if select_menu == "Projects":
@@ -535,6 +570,7 @@ if select_menu == "Projects":
         ('🏆 Previsão Cão ou Porco', 'https://github.com/ReinaldoASilva/Previsao-cao-ou-porco'),
         ('🏆 Diamante Rick', 'https://github.com/ReinaldoASilva/Diamante-Rick'),
         ('🏆 Credit-score-classification', 'https://github.com/ReinaldoASilva/Credit-score-classification'),
+        ('🏆 Employee_Turnover_Predicition', 'https://github.com/ReinaldoASilva/Employee_Turnover_Predicition'),
     ]
 
     # Exibe os projetos e links
