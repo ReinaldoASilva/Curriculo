@@ -358,10 +358,6 @@ elif select_menu == "Work History":
                 ]
             }
 
-
-
-
-
         ]
 
         # Exibe a experiência profissional em duas colunas
@@ -390,8 +386,11 @@ elif select_menu == "Certifications":
                     'Complice',
                     'Mensuração e Gestão de Performance e Riscos',
                     'Economia e Finanças',
-                    'Instrumentos de Renda Variável, Renda Fixa e Derivativos'
+                    'Instrumentos de Renda Variável, Renda Fixa e Derivativos',
+                     "----------------------------------------"
+
                 ]
+ 
             },
             {
                 'curso': 'Fundamentos da Gestão de Projetos',
@@ -401,7 +400,8 @@ elif select_menu == "Certifications":
                     'PMI',
                     'PMBoK',
                     'Riscos',
-                    'Monitoramento e Controle'
+                    'Monitoramento e Controle',
+                    "----------------------------------------"
                 ]
             },
             {
@@ -412,7 +412,8 @@ elif select_menu == "Certifications":
                     'Tomada de Decisão',
                     'Melhoria Contínua',
                     'Aumento da Eficiência',
-                    'Processos Produtivos'
+                    'Processos Produtivos',
+                    "----------------------------------------"
                 ]
             },
             {
@@ -425,7 +426,8 @@ elif select_menu == "Certifications":
                     'Business Inteligent',
                     'Machine Learning',
                     'Git',
-                    'Statistics'
+                    'Statistics',
+                    "----------------------------------------"
                 ]
             },
             {
@@ -440,7 +442,8 @@ elif select_menu == "Certifications":
                     'MLOps e DataOps',
                     'Dados Como Serviço',
                     'ETL - Extração, Transformação e Carga de Dados',
-                    'Como Iniciar um Projeto de Big Data?'
+                    'Como Iniciar um Projeto de Big Data?',
+                    "----------------------------------------"
                 ]
             },
             {
@@ -454,6 +457,7 @@ elif select_menu == "Certifications":
                     'Análise de Dados',
                     'Gestão de Riscos',
                     'Pensamento Crítico',
+                    "----------------------------------------"
                 ]
             },
             {
@@ -467,6 +471,7 @@ elif select_menu == "Certifications":
                     'Análise de Dados',
                     'Gestão de Riscos',
                     'Pensamento Crítico',
+                    "----------------------------------------"
                 ]
             },
         {
@@ -475,8 +480,8 @@ elif select_menu == "Certifications":
                 'periodo': 'Out-2023',
                 'habilidades': [
                     'Act Commands que todo dev deveria conhecer',
-                    'Elevando o nível dos Act Commands'
-                
+                    'Elevando o nível dos Act Commands',
+                    "----------------------------------------"
                 ]
             },
         
@@ -486,8 +491,8 @@ elif select_menu == "Certifications":
                 'periodo': 'Out-2023',
                 'habilidades': [
                     'O código Davinci',
-                    'Criando conta na Openai'
-                
+                    'Criando conta na Openai',
+                    "----------------------------------------"
                 ]
             },
         {
@@ -497,8 +502,8 @@ elif select_menu == "Certifications":
                 'habilidades': [
                     'Pair Programming with GPT',
                     'Documentações Profissionais e Instântaneas',
-                    'ChatGpt como Mentor'
-                
+                    'ChatGpt como Mentor',
+                    "----------------------------------------"
                 ]
             },
         
@@ -510,8 +515,8 @@ elif select_menu == "Certifications":
                     'Códigos Eficientes',
                     'Simplificação de Códigos',
                     'Modularizando o Código',
-                    'Refatorando a estrutura de pastas e combinando técnicas'
-                
+                    'Refatorando a estrutura de pastas e combinando técnicas',
+                    "----------------------------------------"
                 ]
             },
         
@@ -523,8 +528,8 @@ elif select_menu == "Certifications":
                     'GPT como entrevistador',
                     'Entre no DNA técnico da empresa desejada',
                     'Entre no DNA de soft skills da empresa desejada',
-                    'GPT como Entrevistador'
-                
+                    'GPT como Entrevistador',
+                    "----------------------------------------"
                 ]
             },
         
@@ -535,8 +540,8 @@ elif select_menu == "Certifications":
                 'habilidades': [
                     'Métodos de Machine Learning e suas aplicações',
                     'Machine Learning aplicados em sistemas reais',
-                    'Modelos de Machine Learning para Visão Computaciona'
-                
+                    'Modelos de Machine Learning para Visão Computaciona',
+                    "----------------------------------------"
                 ]
             },
 
@@ -546,8 +551,8 @@ elif select_menu == "Certifications":
                 'periodo': 'Out-2023',
                 'habilidades': [
                     'Métodos de Machine Learning bioinspirados',
-                    'Algoritmos Heurísticos x Determinísticos'
-                
+                    'Algoritmos Heurísticos x Determinísticos',
+                    "----------------------------------------"
                 ]
             },
 
@@ -558,8 +563,8 @@ elif select_menu == "Certifications":
                 'habilidades': [
                     'Redes Neurais Artificiais',
                     'Treinamento de uma Rede Neural Artificial',
-                    'Classificação: Execução da Rede Neural Artificial'
-                
+                    'Classificação: Execução da Rede Neural Artificial',
+                    "----------------------------------------"
                 ]
             }
         
@@ -572,7 +577,7 @@ elif select_menu == "Certifications":
 
         # Exibe os primeiros 4 cursos na primeira coluna
         for i, curso in enumerate(cursos_complementares):
-            if i < 4:
+            if i < 7:
                 col1.markdown(f"**{curso['curso']}**\n*{curso['instituicao']}*\n{curso['periodo']}")
                 for habilidade in curso['habilidades']:
                     col1.write(f"- {habilidade}")
