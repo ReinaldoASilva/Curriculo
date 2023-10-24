@@ -370,7 +370,13 @@ elif select_menu == "Work History":
             for habilidade in experiencia['habilidades']:
                 col1.write(f"- {habilidade}")
 
-elif select_menu == "Certifications":
+
+# Exibe a mensagem de última atualização na barra lateral
+last_update = datetime.datetime(2023, 10, 24)  # Substitua pela data da última atualização
+certifications = "Redes Neurais Artificiais"  # Substitua pelo nome do último projeto
+st.sidebar.info(f"Last Update: {last_update.strftime('%d/%m/%Y')}, Certifications: {certifications}")
+
+if select_menu == "Certifications":
         st.write('#')
         st.subheader('Certifications')
 
@@ -590,7 +596,7 @@ elif select_menu == "Certifications":
 # Exibe a mensagem de última atualização na barra lateral
 last_update = datetime.datetime(2023, 10, 24)  # Substitua pela data da última atualização
 project_name = "Employee_Turnover_Predicition"  # Substitua pelo nome do último projeto
-st.sidebar.info(f"Última atualização: {last_update.strftime('%d/%m/%Y')}, Project: {project_name}")
+st.sidebar.info(f"Last Update: {last_update.strftime('%d/%m/%Y')}, \n  Project_Name: {project_name}")  
 
 if select_menu == "Projects":
 
