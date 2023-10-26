@@ -594,8 +594,8 @@ if select_menu == "Certifications":
         
 
 # Exibe a mensagem de última atualização na barra lateral
-last_update = datetime.datetime(2023, 10, 24)  # Substitua pela data da última atualização
-project_name = "Employee_Turnover_Predicition"  # Substitua pelo nome do último projeto
+last_update = datetime.datetime(2023, 10, 26)  # Substitua pela data da última atualização
+project_name = "SuperMarket-Dash"  # Substitua pelo nome do último projeto
 st.sidebar.info(f"Last Update: {last_update.strftime('%d/%m/%Y')}, \n  Project_Name: {project_name}")  
 
 if select_menu == "Projects":
@@ -628,6 +628,7 @@ if select_menu == "Projects":
         ('🏆 Obesidade Infantil', 'https://github.com/ReinaldoASilva/Obesidade-Infantil'),
         ('🏆 Shark Attack', 'https://github.com/ReinaldoASilva/Shark-Attack'),
         ('🏆 Amazon Top Books', 'https://github.com/ReinaldoASilva/Amazon-top-books')
+        ('🏆 SuperMarket-Dash', 'https://github.com/ReinaldoASilva/SuperMarket-Dash')
     ]
 
     st.markdown("")
