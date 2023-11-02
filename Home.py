@@ -74,7 +74,7 @@ if select_menu == "Página Inicial":
         st.download_button(
             label="Download Resume CV",
             data=PDFbyte,
-            file_name='Resume.pdf',
+            file_name='ReinaldoBlack.cv.pdf',
             mime='application/octet-stream'
         )
     st.write(email)
