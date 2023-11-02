@@ -68,18 +68,6 @@ if select_menu == "Página Inicial":
     with col1:
         st.image(profile_pic, width=450, use_container_width=False)
 
-        # Aplica CSS para alinhar a imagem à esquerda
-        st.markdown(
-            f"""
-            <style>
-                .stImage > img {{
-                    float: left;
-                }}
-            </style>
-            """,
-            unsafe_allow_html=True,
-        )
-
     with col2:
         st.title(name)
         st.write(Description)
