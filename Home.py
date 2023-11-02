@@ -66,7 +66,7 @@ if select_menu == "Página Inicial":
     col1, col2 = st.columns(2, gap='small')
 
     with col1:
-        st.image(profile_pic, width=230)
+        st.image(profile_pic, width=450)
 
     with col2:
         st.title(name)
